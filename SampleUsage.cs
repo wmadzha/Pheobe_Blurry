@@ -24,6 +24,9 @@ namespace ConsoleTester
                 var result = await bucket.AddImage(data);
                 // Assign The ImageID To Sales Item Object
                 item.ImageID = data.ImageID;
+                // Save Sales Item Into Data Store
+                
+                
                 // Later On During Randering We Call The Details Through Azure Tables.
             }
             catch (Exception ex)
