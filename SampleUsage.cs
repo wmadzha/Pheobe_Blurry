@@ -19,8 +19,11 @@ namespace ConsoleTester
                 SalesItem item = new SalesItem();
                 // Assuming We Are Saving Sales Item Images
                 PhotoBucketModel data = new PhotoBucketModel("SalesItemPhotoBucket","Sales", "jpg");
+                // Assuming We Are Getting The Stream From Local Desktop File
                 data.ImageStream = new FileStream(@"c:\users\mypc\desktop\sample.jpg", FileMode.Open, FileAccess.Read);
+                // Instantiate Photobucket With Desired Storage Name And Storage Key
                 PhotoBucketHelper bucket = new PhotoBucketHelper("StorageName", "StorageKey");
+                // Add The Image To Azure
                 var result = await bucket.AddImage(data);
                 // Assign The ImageID To Sales Item Object
                 item.ImageID = data.ImageID;
