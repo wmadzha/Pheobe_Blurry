@@ -30,7 +30,7 @@ namespace ConsoleTester
                 // Save Sales Item Into Data Store
                 
                 
-                // Later On During Randering We Call The Details Through Azure Tables.
+                // Later On During Rendering We Call The Details Through Azure Tables.
             }
             catch (Exception ex)
             {
